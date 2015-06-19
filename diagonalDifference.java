@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
-
+/*
+	URL: https://www.hackerrank.com/challenges/diagonal-difference
+*/
 public class Solution {
 	public static void main(String[] args) {
 		int ele;
