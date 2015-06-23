@@ -1,34 +1,27 @@
 import java.util.Scanner;
-
 /*
-	https://www.hackerrank.com/challenges/time-conversion
+		https://www.hackerrank.com/challenges/time-conversion
 */
 
 public class TimeConversion {
-
 	public static void main(String[] args) {
 		Scanner s=new Scanner(System.in);
-    	String st=s.next();
-		int i=Integer.parseInt(st.substring(0, 2));
-		if(st.charAt(8)=='P')
+    	String timein12=s.next();
+		int hour=Integer.parseInt(timein12.substring(0, 2));
+		String timein24=timein12.substring(2, 8);
+		if(timein12.charAt(8)=='P')
 		{
-			if(i!=12)
+			if(hour!=12)
 			{
-			i+=12;
+				hour+=12;
 			}
-			System.out.println(i+st.substring(2, 8));
+			timein24=hour+timein24;
 		}
-		else if(st.charAt(8)=='A')
+		else
 		{
-			if(i==12)
-			{
-				System.out.println("00"+st.substring(2,8));
-			}
-			else
-			{
-				System.out.println(st.substring(0,8));
-			}
+			timein24=hour==12?"00"+timein24:timein12.substring(0,8);
 		}
+		System.out.println(timein24);
 		s.close();
 	}
 
