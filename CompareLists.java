@@ -1,4 +1,6 @@
 /*
+  https://www.hackerrank.com/challenges/compare-two-linked-lists
+  
   Compare two linked lists A and B
   Return 1 if they are identical and 0 if they are not. 
   Node is defined as 
